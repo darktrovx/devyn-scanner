@@ -6,7 +6,6 @@ QBCore.Functions.CreateUseableItem("scanner", function(source, item)
 end)
 
 QBCore.Functions.CreateCallback("radio:RadiosInRange", function(source, cb, coords)
-
     local players = QBCore.Functions.GetQBPlayers()
     local channels = {}
     for k, v in pairs(players) do
@@ -15,7 +14,6 @@ QBCore.Functions.CreateCallback("radio:RadiosInRange", function(source, cb, coor
         if distance <= Config.ScannerRange then
             local state = Player(v.PlayerData.source).state
             local channel = state["radioChannel"]
-            print(channel)
             if channel ~= 0 then
                 channels[channel] = {
                     min = (channel - math.random(1, Config.GuessRangeMin)), 
