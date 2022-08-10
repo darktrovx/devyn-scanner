@@ -1,7 +1,8 @@
 local QBCore = exports["qb-core"]:GetCoreObject()
 
 QBCore.Functions.CreateUseableItem("scanner", function(source, item)
-    TriggerClientEvent("radio:scan", source)
+    local src = source
+    TriggerClientEvent("radio:scan", src)
 end)
 
 QBCore.Functions.CreateCallback("radio:RadiosInRange", function(source, cb, coords)
