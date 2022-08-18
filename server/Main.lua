@@ -17,7 +17,7 @@ QBCore.Functions.CreateCallback("radio:RadiosInRange", function(source, cb, coor
             if channel ~= 0 then
                 channels[channel] = {
                     min = (channel - math.random(1, Config.GuessRangeMin)), 
-                    max = (channel - math.random(1, Config.GuessRangeMax))
+                    max = (channel + math.random(1, Config.GuessRangeMax))
                 }
             end
         end
